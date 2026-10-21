@@ -17,7 +17,7 @@ A modern, responsive Linktree clone built with Angular 20.1.0. Create your own p
 2. **Clone the repository** to your local machine:
 
    ```bash
-   git clone https://github.com/manthanank/linktree-clone-angular.git
+   git clone https://github.com/AnunayPatil/linktree-angular.git
    cd linktree-clone-angular
    ```
 
