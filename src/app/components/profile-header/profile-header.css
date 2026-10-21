@@ -1,0 +1,206 @@
+.profile-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 24px 8px;
+  animation: fadeIn 0.5s ease both;
+}
+
+/* ---- Top action bar ---- */
+.header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+.action-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.action-button {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background: var(--toggle-bg);
+  border: 1px solid var(--border-default);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--toggle-icon);
+  transition: all var(--transition-base);
+  backdrop-filter: blur(15px);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+.action-button:hover {
+  background: var(--bg-overlay-hover);
+  transform: translateY(-1px) scale(1.05);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-strong);
+}
+
+.action-button:focus-visible {
+  outline: 2px solid var(--border-strong);
+  outline-offset: 2px;
+}
+
+.action-button:active {
+  transform: scale(0.95);
+}
+
+.action-button.copied {
+  color: var(--available-text);
+  border-color: var(--available-border);
+  background: var(--available-bg);
+}
+
+/* ---- Profile content ---- */
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* ---- Avatar ---- */
+.image-wrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.image-container {
+  height: 108px;
+  width: 108px;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  border: 3px solid var(--border-default);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.image-container:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-lg);
+}
+
+.image-container img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.available-dot {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 16px;
+  height: 16px;
+  border-radius: var(--radius-full);
+  background: var(--available-dot);
+  border: 2px solid var(--bg-base);
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* ---- Text info ---- */
+.text-container {
+  text-align: center;
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.name h1 {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.6px;
+  line-height: 1.2;
+  margin: 0 0 6px;
+}
+
+.desc p {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0 0 10px;
+}
+
+/* ---- Availability badge ---- */
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  background: var(--available-bg);
+  border: 1px solid var(--available-border);
+  color: var(--available-text);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  margin-bottom: 8px;
+}
+
+.availability-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: var(--radius-full);
+  background: var(--available-dot);
+  flex-shrink: 0;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+/* ---- Location ---- */
+.location {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 768px) {
+  .profile-header {
+    padding: 16px 20px 4px;
+  }
+
+  .image-container {
+    height: 96px;
+    width: 96px;
+  }
+
+  .name h1 {
+    font-size: 24px;
+  }
+
+  .desc p {
+    font-size: 14px;
+  }
+
+  .action-button {
+    width: 40px;
+    height: 40px;
+  }
+}

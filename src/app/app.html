@@ -1,0 +1,59 @@
+<main>
+  @if (isLoading()) {
+  <div class="loading-container">
+    <div class="loading-spinner"></div>
+    <p>Loading profile...</p>
+  </div>
+  } @else if (error()) {
+  <div class="error-container">
+    <h2>Oops! Something went wrong</h2>
+    <p>{{ error() }}</p>
+    <button type="button" (click)="loadProfileData()" class="retry-button">
+      Try Again
+    </button>
+  </div>
+  } @else if (currentProfile()) {
+  <div class="container">
+    @defer (on immediate) {
+    <app-profile-header [profile]="currentProfile()!"></app-profile-header>
+    } @placeholder {
+    <div class="profile-header-placeholder">
+      <div class="avatar-skeleton"></div>
+      <div class="info-skeleton"></div>
+    </div>
+    } @error {
+    <div class="profile-header-error">
+      <p>Failed to load profile header</p>
+    </div>
+    }
+
+    <div class="links-container">
+      @for (link of sortedLinks(); track link.url; let i = $index) {
+      @defer (on immediate) {
+      <app-link-tile [link]="link" [index]="i"></app-link-tile>
+      } @placeholder {
+      <div class="link-tile-skeleton"></div>
+      } @error {
+      <div class="link-tile-error">
+        <p>Failed to load link</p>
+      </div>
+      }
+      }
+    </div>
+  </div>
+
+  @defer (on immediate) {
+  <footer>
+    <div class="footer-container">
+      <p>&copy; {{ currentYear() }} Linktree Clone by {{ currentProfile()!.name }}</p>
+    </div>
+  </footer>
+  } @placeholder {
+  <div class="footer-placeholder"></div>
+  } @error {
+  <div class="footer-error">
+    <p>Footer unavailable</p>
+  </div>
+  }
+  }
+</main>
