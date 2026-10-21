@@ -37,14 +37,6 @@ A modern, responsive Linktree clone built with Angular 20.1.0. Create your own p
    npm start
    ```
 
-7. **Deploy to Vercel** and your Linktree Clone is ready!
-
-## Deploy 🚀
-
-Deploy your Linktree clone instantly with Vercel:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/import?s=https%3A%2F%2Fgithub.com%2Fmanthanank%2Flinktree-clone-angular&hasTrialAvailable=1&showOptionalTeamCreation=false&project-name=linktree-clone-angular&framework=angular&totalProjects=1&remainingProjects=1)
-
 ## Technology Stack 💻
 
 - **Angular 20.1.0** - Latest version with standalone components
@@ -68,12 +60,6 @@ src/
 │   └── svg/               # Social media icons
 └── ...
 ```
-
-## Demo 🌐
-
-**Live Demo:** [linktree-clone-angular.vercel.app](https://linktree-clone-angular.vercel.app/)
-
-## Development 🛠️
 
 ### Prerequisites
 
