@@ -123,9 +123,9 @@ If you found this project helpful, please give it a star! Your support means a l
 
 ### Manthan Ankolekar
 
-- Website: [manthanank.github.io](https://manthanank.github.io/)
-- GitHub: [@manthanank](https://github.com/manthanank)
-- LinkedIn: [manthanank](https://www.linkedin.com/in/manthanank)
+- Website: [AnunayPatil.github.io](https://github.com/anunaypatil)
+- GitHub: [@AnunayPatil](https://github.com/anunaypatil)
+- LinkedIn: [AnunayPatil](https://www.linkedin.com/in/anunay-patil)
 
 ---
 
